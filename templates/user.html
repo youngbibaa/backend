@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>User name: {{ name }}</p>
+    <table style="border: 1px solid black">
+      <tr>
+        <td style="border: 1px solid black">{{ name }}</td>
+        <td style="border: 1px solid black">
+          {% if age < 60 %}
+          <span>Ты еще слишком молод</span>
+          {% else %}
+          <span>Ты шал!</span>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+
+    {% for key, value in random_dict.items() %}
+    <div style="display: flex; flex-direction: row; background-color: bisque">
+      <p>Key: {{ key }}</p>
+      <p>Value: {{ value }}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
